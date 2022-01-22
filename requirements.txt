@@ -1,2 +1,2 @@
-import streamlit as st
-import spacy
+streamlit
+spacy==2.3.5
