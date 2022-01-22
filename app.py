@@ -43,8 +43,10 @@ def main():
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"): 
         result = prediction(user_input) 
-        st.success('Based on this borrower\'s personal story, the loan will be in {} category'.format(result))
-        print(result)
+        if result=="NON-DEFAULT":
+            st.success('Based on this borrower\'s personal story, the loan will be in {} category'.format(result))
+        else:
+            st.error('Based on this borrower\'s personal story, the loan will be in {} category'.format(result))
      
 if __name__=='__main__': 
     main()
